@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- project -->
+	<groupId>com.github.doraeven.oss</groupId>
+	<artifactId>oss-parent</artifactId>
+	<version>1</version>
+	<packaging>pom</packaging>
+
+	<name>oss</name>
+	<description>Motu OSS Parent.</description>
+
+	<!-- update in 20240220 -->
+	<!-- properties -->
+	<properties>
+		<!-- charset -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<!-- jdk version -->
+		<!-- https://maven.apache.org/general.html -->
+		<java.version>21</java.version>
+		<maven.compiler.release>${java.version}</maven.compiler.release>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+
+		<!-- skip test -->
+		<!-- true: it will hide "src/test/java" and "src/test/resources" -->
+		<maven.test.skip>false</maven.test.skip>
+
+		<!-- repositories url -->
+		<repository.aliyun.url>https://maven.aliyun.com/repository/public/</repository.aliyun.url>
+		<repository.central.url>https://repo.maven.apache.org/maven2/</repository.central.url>
+
+		<!-- plugins version -->
+		<!-- https://maven.apache.org/plugins/ -->
+		<!-- core -->
+		<maven-clean-plugin.version>3.3.2</maven-clean-plugin.version>
+		<maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+		<maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
+		<maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
+		<maven-install-plugin.version>3.1.1</maven-install-plugin.version>
+		<maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+		<maven-site-plugin.version>4.0.0-M13</maven-site-plugin.version>
+		<maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+		<maven-verifier-plugin.version>1.1</maven-verifier-plugin.version>
+		<!-- packaging -->
+		<maven-ear-plugin.version>3.3.0</maven-ear-plugin.version>
+		<maven-ejb-plugin.version>3.2.1</maven-ejb-plugin.version>
+		<maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+		<maven-rar-plugin.version>3.0.0</maven-rar-plugin.version>
+		<maven-war-plugin.version>3.4.0</maven-war-plugin.version>
+		<maven-acr-plugin.version>3.1.0</maven-acr-plugin.version>
+		<maven-shade-plugin.version>3.5.2</maven-shade-plugin.version>
+		<maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+		<maven-jlink-plugin.version>3.2.0</maven-jlink-plugin.version>
+		<maven-jmod-plugin.version>3.0.0-alpha-1</maven-jmod-plugin.version>
+		<!-- reporting -->
+		<maven-changelog-plugin.version>2.3</maven-changelog-plugin.version>
+		<maven-changes-plugin.version>2.12.1</maven-changes-plugin.version>
+		<maven-checkstyle-plugin.version>3.3.1</maven-checkstyle-plugin.version>
+		<maven-doap-plugin.version>1.2</maven-doap-plugin.version>
+		<maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
+		<maven-jdeps-plugin.version>3.1.2</maven-jdeps-plugin.version>
+		<maven-jxr-plugin.version>3.3.2</maven-jxr-plugin.version>
+		<maven-linkcheck-plugin.version>1.2</maven-linkcheck-plugin.version>
+		<maven-pmd-plugin.version>3.21.2</maven-pmd-plugin.version>
+		<maven-project-info-reports-plugin.version>3.5.0</maven-project-info-reports-plugin.version>
+		<maven-surefire-report-plugin.version>3.2.5</maven-surefire-report-plugin.version>
+		<!-- tools -->
+		<maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
+		<maven-artifact-plugin.version>3.5.0</maven-artifact-plugin.version>
+		<maven-archetype-plugin.version>3.2.1</maven-archetype-plugin.version>
+		<maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
+		<maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
+		<maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
+		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
+		<maven-help-plugin.version>3.4.0</maven-help-plugin.version>
+		<maven-invoker-plugin.version>3.6.0</maven-invoker-plugin.version>
+		<maven-jarsigner-plugin.version>3.0.0</maven-jarsigner-plugin.version>
+		<maven-jdeprscan-plugin.version>3.0.0-alpha-1</maven-jdeprscan-plugin.version>
+		<maven-patch-plugin.version>1.2</maven-patch-plugin.version>
+		<maven-pdf-plugin.version>1.6.1</maven-pdf-plugin.version>
+		<maven-plugin-plugin.version>3.11.0</maven-plugin-plugin.version>
+		<maven-plugin-report-plugin.version>3.11.0</maven-plugin-report-plugin.version>
+		<maven-release-plugin.version>3.0.1</maven-release-plugin.version>
+		<maven-remote-resources-plugin.version>3.1.0</maven-remote-resources-plugin.version>
+		<maven-scm-plugin.version>2.0.1</maven-scm-plugin.version>
+		<maven-scm-publish-plugin.version>3.2.1</maven-scm-publish-plugin.version>
+		<maven-scripting-plugin.version>3.0.0</maven-scripting-plugin.version>
+		<maven-stage-plugin.version>1.0</maven-stage-plugin.version>
+		<maven-toolchains-plugin.version>3.1.0</maven-toolchains-plugin.version>
+		<maven-wrapper-plugin.version>3.2.0</maven-wrapper-plugin.version>
+
+		<!-- extend plugins -->
+		<!-- https://github.com/wvengen/proguard-maven-plugin -->
+		<proguard-maven-plugin.version>2.6.0</proguard-maven-plugin.version>
+	</properties>
+
+	<!-- repositories -->
+	<repositories>
+		<repository>
+			<id>aliyun</id>
+			<name>Aliyun Repository</name>
+			<url>${repository.aliyun.url}</url>
+		</repository>
+		<repository>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>${repository.central.url}</url>
+		</repository>
+	</repositories>
+
+	<!-- plugin repositories -->
+	<pluginRepositories>
+		<pluginRepository>
+			<id>aliyun</id>
+			<name>Aliyun Repository</name>
+			<url>${repository.aliyun.url}</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>${repository.central.url}</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<!-- build -->
+	<build>
+		<!-- pluginManagement -->
+		<pluginManagement>
+			<plugins>
+				<!-- core -->
+				<!-- maven-clean -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>${maven-clean-plugin.version}</version>
+				</plugin>
+				<!-- maven-compiler -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
+					<!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-release.html -->
+					<!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-source-and-target.html -->
+					<configuration>
+						<release>${maven.compiler.release}</release>
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.target}</target>
+					</configuration>
+				</plugin>
+				<!-- maven-deploy -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${maven-deploy-plugin.version}</version>
+				</plugin>
+				<!-- maven-failsafe -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>${maven-failsafe-plugin.version}</version>
+				</plugin>
+				<!-- maven-install -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>${maven-install-plugin.version}</version>
+				</plugin>
+				<!-- maven-resources -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${maven-resources-plugin.version}</version>
+					<!-- https://maven.apache.org/plugins/maven-resources-plugin/examples/encoding.html -->
+					<configuration>
+						<encoding>${project.build.resourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+				<!-- maven-site -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>${maven-site-plugin.version}</version>
+					<!-- https://maven.apache.org/plugins/maven-site-plugin/site-mojo.html -->
+					<configuration>
+						<inputEncoding>${project.build.sourceEncoding}</inputEncoding>
+						<outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
+					</configuration>
+				</plugin>
+				<!-- maven-surefire -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven-surefire-plugin.version}</version>
+					<!-- skipping tests -->
+					<!-- https://maven.apache.org/surefire/maven-surefire-plugin/examples/skipping-tests.html -->
+					<configuration>
+						<skipTests>${maven.test.skip}</skipTests>
+					</configuration>
+				</plugin>
+				<!-- maven-verifier -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-verifier-plugin</artifactId>
+					<version>${maven-verifier-plugin.version}</version>
+				</plugin>
+
+				<!-- packaging -->
+				<!-- maven-ear -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ear-plugin</artifactId>
+					<version>${maven-ear-plugin.version}</version>
+				</plugin>
+				<!-- maven-ejb -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ejb-plugin</artifactId>
+					<version>${maven-ejb-plugin.version}</version>
+				</plugin>
+				<!-- maven-jar -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${maven-jar-plugin.version}</version>
+				</plugin>
+				<!-- maven-rar -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-rar-plugin</artifactId>
+					<version>${maven-rar-plugin.version}</version>
+				</plugin>
+				<!-- maven-war -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${maven-war-plugin.version}</version>
+				</plugin>
+				<!-- maven-acr -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-acr-plugin</artifactId>
+					<version>${maven-acr-plugin.version}</version>
+				</plugin>
+				<!-- maven-shade -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-shade-plugin</artifactId>
+					<version>${maven-shade-plugin.version}</version>
+				</plugin>
+				<!-- maven-source -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>${maven-source-plugin.version}</version>
+				</plugin>
+				<!-- maven-jlink -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jlink-plugin</artifactId>
+					<version>${maven-jlink-plugin.version}</version>
+				</plugin>
+				<!-- maven-jmod -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jmod-plugin</artifactId>
+					<version>${maven-jmod-plugin.version}</version>
+				</plugin>
+
+				<!-- reporting -->
+				<!-- maven-changelog -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-changelog-plugin</artifactId>
+					<version>${maven-changelog-plugin.version}</version>
+				</plugin>
+				<!-- maven-changes -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-changes-plugin</artifactId>
+					<version>${maven-changes-plugin.version}</version>
+				</plugin>
+				<!-- maven-checkstyle -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-checkstyle-plugin</artifactId>
+					<version>${maven-checkstyle-plugin.version}</version>
+				</plugin>
+				<!-- maven-doap -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-doap-plugin</artifactId>
+					<version>${maven-doap-plugin.version}</version>
+				</plugin>
+				<!-- maven-javadoc -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>${maven-javadoc-plugin.version}</version>
+				</plugin>
+				<!-- maven-jdeps -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jdeps-plugin</artifactId>
+					<version>${maven-jdeps-plugin.version}</version>
+				</plugin>
+				<!-- maven-jxr -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jxr-plugin</artifactId>
+					<version>${maven-jxr-plugin.version}</version>
+				</plugin>
+				<!-- maven-linkcheck -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-linkcheck-plugin</artifactId>
+					<version>${maven-linkcheck-plugin.version}</version>
+				</plugin>
+				<!-- maven-pmd -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-pmd-plugin</artifactId>
+					<version>${maven-pmd-plugin.version}</version>
+				</plugin>
+				<!-- maven-project-info-reports -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>${maven-project-info-reports-plugin.version}</version>
+				</plugin>
+				<!-- maven-surefire-report -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-report-plugin</artifactId>
+					<version>${maven-surefire-report-plugin.version}</version>
+				</plugin>
+
+				<!-- tools -->
+				<!-- maven-antrun -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>${maven-antrun-plugin.version}</version>
+				</plugin>
+				<!-- maven-artifact -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-artifact-plugin</artifactId>
+					<version>${maven-artifact-plugin.version}</version>
+				</plugin>
+				<!-- maven-archetype -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-archetype-plugin</artifactId>
+					<version>${maven-archetype-plugin.version}</version>
+				</plugin>
+				<!-- maven-assembly -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${maven-assembly-plugin.version}</version>
+				</plugin>
+				<!-- maven-dependency -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${maven-dependency-plugin.version}</version>
+				</plugin>
+				<!-- maven-enforcer -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-enforcer-plugin</artifactId>
+					<version>${maven-enforcer-plugin.version}</version>
+				</plugin>
+				<!-- maven-gpg -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-gpg-plugin</artifactId>
+					<version>${maven-gpg-plugin.version}</version>
+				</plugin>
+				<!-- maven-help -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-help-plugin</artifactId>
+					<version>${maven-help-plugin.version}</version>
+				</plugin>
+				<!-- maven-invoker -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-invoker-plugin</artifactId>
+					<version>${maven-invoker-plugin.version}</version>
+				</plugin>
+				<!-- maven-jarsigner -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jarsigner-plugin</artifactId>
+					<version>${maven-jarsigner-plugin.version}</version>
+				</plugin>
+				<!-- maven-jdeprscan -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jdeprscan-plugin</artifactId>
+					<version>${maven-jdeprscan-plugin.version}</version>
+				</plugin>
+				<!-- maven-patch -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-patch-plugin</artifactId>
+					<version>${maven-patch-plugin.version}</version>
+				</plugin>
+				<!-- maven-pdf -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-pdf-plugin</artifactId>
+					<version>${maven-pdf-plugin.version}</version>
+				</plugin>
+				<!-- maven-plugin -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-plugin-plugin</artifactId>
+					<version>${maven-plugin-plugin.version}</version>
+				</plugin>
+				<!-- maven-plugin-report -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-plugin-report-plugin</artifactId>
+					<version>${maven-plugin-report-plugin.version}</version>
+				</plugin>
+				<!-- maven-release -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>${maven-release-plugin.version}</version>
+				</plugin>
+				<!-- maven-remote-resources -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-remote-resources-plugin</artifactId>
+					<version>${maven-remote-resources-plugin.version}</version>
+				</plugin>
+				<!-- maven-scm -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scm-plugin</artifactId>
+					<version>${maven-scm-plugin.version}</version>
+				</plugin>
+				<!-- maven-scm-publish -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scm-publish-plugin</artifactId>
+					<version>${maven-scm-publish-plugin.version}</version>
+				</plugin>
+				<!-- maven-scripting -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scripting-plugin</artifactId>
+					<version>${maven-scripting-plugin.version}</version>
+				</plugin>
+				<!-- maven-stage -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-stage-plugin</artifactId>
+					<version>${maven-stage-plugin.version}</version>
+				</plugin>
+				<!-- maven-toolchains -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-toolchains-plugin</artifactId>
+					<version>${maven-toolchains-plugin.version}</version>
+				</plugin>
+				<!-- maven-wrapper -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-wrapper-plugin</artifactId>
+					<version>${maven-wrapper-plugin.version}</version>
+				</plugin>
+
+				<!-- extend plugins -->
+				<plugin>
+					<groupId>com.github.wvengen</groupId>
+					<artifactId>proguard-maven-plugin</artifactId>
+					<version>${proguard-maven-plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<!-- plugins -->
+		<plugins>
+			<!-- core -->
+			<!-- maven-clean -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+			</plugin>
+			<!-- maven-compiler -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<!-- maven-deploy -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+			</plugin>
+			<!-- maven-failsafe -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+			</plugin>
+			<!-- maven-install -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+			</plugin>
+			<!-- maven-resources -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+			</plugin>
+			<!-- maven-site -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+			</plugin>
+			<!-- maven-surefire -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+			<!-- maven-verifier -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-verifier-plugin</artifactId>
+			</plugin>
+
+			<!-- packaging -->
+			<!-- maven-ear -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+			</plugin>
+			<!-- maven-ejb -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ejb-plugin</artifactId>
+			</plugin>
+			<!-- maven-jar -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+			</plugin>
+			<!-- maven-rar -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-rar-plugin</artifactId>
+			</plugin>
+			<!-- maven-war -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+			</plugin>
+			<!-- maven-acr -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-acr-plugin</artifactId>
+			</plugin>
+			<!-- maven-shade -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+			</plugin>
+			<!-- maven-source -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+			<!-- maven-jlink -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jlink-plugin</artifactId>
+			</plugin>
+			<!-- maven-jmod -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jmod-plugin</artifactId>
+			</plugin>
+
+			<!-- reporting -->
+			<!-- maven-changelog -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changelog-plugin</artifactId>
+			</plugin>
+			<!-- maven-changes -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+			</plugin>
+			<!-- maven-checkstyle -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+			</plugin>
+			<!-- maven-doap -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-doap-plugin</artifactId>
+			</plugin>
+			<!-- maven-javadoc -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>
+			<!-- maven-jdeps -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jdeps-plugin</artifactId>
+			</plugin>
+			<!-- maven-jxr -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+			</plugin>
+			<!-- maven-linkcheck -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-linkcheck-plugin</artifactId>
+			</plugin>
+			<!-- maven-pmd -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+			</plugin>
+			<!-- maven-project-info-reports -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+			</plugin>
+			<!-- maven-surefire-report -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+			</plugin>
+
+			<!-- tools -->
+			<!-- maven-antrun -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+			</plugin>
+			<!-- maven-artifact -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-artifact-plugin</artifactId>
+			</plugin>
+			<!-- maven-archetype -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-archetype-plugin</artifactId>
+			</plugin>
+			<!-- maven-assembly -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+			</plugin>
+			<!-- maven-dependency -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
+			<!-- maven-enforcer -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+			</plugin>
+			<!-- maven-gpg -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+			</plugin>
+			<!-- maven-help -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-help-plugin</artifactId>
+			</plugin>
+			<!-- maven-invoker -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-invoker-plugin</artifactId>
+			</plugin>
+			<!-- maven-jarsigner -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+			</plugin>
+			<!-- maven-jdeprscan -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jdeprscan-plugin</artifactId>
+			</plugin>
+			<!-- maven-patch -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-patch-plugin</artifactId>
+			</plugin>
+			<!-- maven-pdf -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pdf-plugin</artifactId>
+			</plugin>
+			<!-- maven-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+			</plugin>
+			<!-- maven-plugin-report -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-report-plugin</artifactId>
+			</plugin>
+			<!-- maven-release -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+			</plugin>
+			<!-- maven-remote-resources -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-remote-resources-plugin</artifactId>
+			</plugin>
+			<!-- maven-scm -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+			</plugin>
+			<!-- maven-scm-publish -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-publish-plugin</artifactId>
+			</plugin>
+			<!-- maven-scripting -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scripting-plugin</artifactId>
+			</plugin>
+			<!-- maven-stage -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-stage-plugin</artifactId>
+			</plugin>
+			<!-- maven-toolchains -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-toolchains-plugin</artifactId>
+			</plugin>
+			<!-- maven-wrapper -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-wrapper-plugin</artifactId>
+			</plugin>
+
+			<!-- extend plugins -->
+			<plugin>
+				<groupId>com.github.wvengen</groupId>
+				<artifactId>proguard-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!-- profiles -->
+	<profiles>
+		<!-- for eclipse -->
+		<profile>
+			<id>only-eclipse</id>
+			<activation>
+				<property>
+					<name>m2e.version</name>
+				</property>
+			</activation>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<!-- maven-enforcer-plugin (goal "enforce") is ignored by m2e. -->
+						<!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=367870 -->
+						<!-- https://stackoverflow.com/questions/7905501/get-rid-of-pom-not-found-warning-for-org-eclipse-m2elifecycle-mapping -->
+						<plugin>
+							<groupId>org.eclipse.m2e</groupId>
+							<artifactId>lifecycle-mapping</artifactId>
+							<version>1.0.0</version>
+							<configuration>
+								<lifecycleMappingMetadata>
+									<pluginExecutions>
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.apache.maven.plugins</groupId>
+												<artifactId>maven-enforcer-plugin</artifactId>
+												<versionRange>[1.0.0,)</versionRange>
+												<goals>
+													<goal>enforce</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore />
+											</action>
+										</pluginExecution>
+									</pluginExecutions>
+								</lifecycleMappingMetadata>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
+
+</project>
