@@ -1,6 +1,6 @@
 # Motu OSS Parent
 
-Motu OSS Parent.
+Last update: 20240220 released.
 
 ## Introduction
 
@@ -22,19 +22,19 @@ When starting a new project, please add configured **parent pom** to avoid repli
 
 List the info of **parent pom**.
 
-### Base info
+### base info
 | propertie     | info          |
 | ------------- | ------------- |
 | charset       | UTF-8         |
 | jdk version   | 21            |
 
-### Repositories info
+### repositories info
 | propertie     | info          |
 | ------------- | ------------- |
 | master        | aliyun        |
 | slave         | central       |
 
-### Plugins info
+### plugins info
 | propertie     | info          |
 | ------------- | ------------- |
 | core          | maven         |
