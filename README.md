@@ -18,6 +18,28 @@ When starting a new project, please add configured **parent pom** to avoid repli
 </parent>
 ```
 
+## Properties
+
+List the info of **parent pom**.
+
+### Base info
+| propertie     | info          |
+| ------------- | ------------- |
+| charset       | UTF-8         |
+| jdk version   | 21            |
+
+### Repositories info
+| propertie     | info          |
+| ------------- | ------------- |
+| master        | aliyun        |
+| slave         | central       |
+
+### Plugins info
+| propertie     | info          |
+| ------------- | ------------- |
+| core          | maven         |
+| extend        | proguard      |
+
 ## License
 
-The Project is released under version 2.0 of the [Apache License](https://www.apache.org/licenses/LICENSE-2.0).
+The project is released under version 2.0 of the [Apache License](https://www.apache.org/licenses/LICENSE-2.0).
