@@ -22,23 +22,10 @@ When starting a new project, please add configured **parent pom** to avoid repli
 
 List the info of **parent pom**.
 
-### base info
-| propertie     | info          |
-| ------------- | ------------- |
-| charset       | UTF-8         |
-| jdk version   | 21            |
-
-### repositories info
-| propertie     | info          |
-| ------------- | ------------- |
-| master        | aliyun        |
-| slave         | central       |
-
-### plugins info
-| propertie     | info          |
-| ------------- | ------------- |
-| core          | maven         |
-| extend        | proguard      |
+| base          | info          | repositories  | info          | plugins       | info          |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| **charset**   | UTF-8         | **master**    | aliyun        | **core**      | maven         |
+| **jdk**       | 21            | **slave**     | central       | **extend**    | proguard      |
 
 ## License
 
