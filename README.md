@@ -1,6 +1,9 @@
 # Motu OSS Parent
 
-Last update: 20240220 released.
+![Static Badge](https://img.shields.io/badge/build-passing-brightgreen)
+![Static Badge](https://img.shields.io/badge/tag-1-blue)
+![Static Badge](https://img.shields.io/badge/released-v20240220-blue)
+![GitHub License](https://img.shields.io/github/license/doraeven/oss-parent)
 
 ## Introduction
 
@@ -22,10 +25,10 @@ When starting a new project, please add configured **parent pom** to avoid repli
 
 List the info of **parent pom**.
 
-| base          | info          | repositories  | info          | plugins       | info          |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| **charset**   | UTF-8         | **master**    | aliyun        | **core**      | maven         |
-| **jdk**       | 21            | **slave**     | central       | **extend**    | proguard      |
+| base          | info          || repositories  | info          || plugins       | info          |
+| ------------- | ------------- || ------------- | ------------- || ------------- | ------------- |
+| jdk           | 21            || master        | aliyun        || core          | maven         |
+| charset       | UTF-8         || slave         | central       || extend        | proguard      |
 
 ## License
 
