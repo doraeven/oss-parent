@@ -25,10 +25,10 @@ When starting a new project, please add configured **parent pom** to avoid repli
 
 List the info of **parent pom**.
 
-| base          | info          | repositories  | info          | plugins       | info          |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| jdk           | 21            | master        | aliyun        | core          | maven         |
-| charset       | UTF-8         | slave         | central       | extend        | proguard      |
+| base          | info          | | repositories  | info          | | plugins       | info          |
+| ------------- | ------------- |-| ------------- | ------------- |-| ------------- | ------------- |
+| jdk           | 21            | | master        | aliyun        | | core          | maven         |
+| charset       | UTF-8         | | slave         | central       | | extend        | proguard      |
 
 ## License
 
