@@ -13,7 +13,6 @@
 	<name>oss</name>
 	<description>Motu OSS Parent.</description>
 
-	<!-- update in 20240220 -->
 	<!-- properties -->
 	<properties>
 		<!-- charset -->
@@ -36,6 +35,7 @@
 		<repository.aliyun.url>https://maven.aliyun.com/repository/public/</repository.aliyun.url>
 		<repository.central.url>https://repo.maven.apache.org/maven2/</repository.central.url>
 
+		<!-- update in 20240306 -->
 		<!-- plugins version -->
 		<!-- https://maven.apache.org/plugins/ -->
 		<!-- core -->
