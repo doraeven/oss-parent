@@ -1,9 +1,9 @@
 1.Window > Preferences > Team > Ignored Resources
 
 2.Add Pattern:
-############################
++--------------------------+
 .classpath
 .project
 .settings
 target
-############################
++--------------------------+
