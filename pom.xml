@@ -35,7 +35,7 @@
 		<repository.aliyun.url>https://maven.aliyun.com/repository/public/</repository.aliyun.url>
 		<repository.central.url>https://repo.maven.apache.org/maven2/</repository.central.url>
 
-		<!-- update in 20240306 -->
+		<!-- update in 20240312 -->
 		<!-- plugins version -->
 		<!-- https://maven.apache.org/plugins/ -->
 		<!-- core -->
@@ -75,7 +75,7 @@
 		<maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
 		<maven-artifact-plugin.version>3.5.0</maven-artifact-plugin.version>
 		<maven-archetype-plugin.version>3.2.1</maven-archetype-plugin.version>
-		<maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
+		<maven-assembly-plugin.version>3.7.0</maven-assembly-plugin.version>
 		<maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
 		<maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
 		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
