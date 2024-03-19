@@ -35,12 +35,12 @@
 		<repository.aliyun.url>https://maven.aliyun.com/repository/public/</repository.aliyun.url>
 		<repository.central.url>https://repo.maven.apache.org/maven2/</repository.central.url>
 
-		<!-- update in 20240312 -->
+		<!-- update in 20240318 -->
 		<!-- plugins version -->
 		<!-- https://maven.apache.org/plugins/ -->
 		<!-- core -->
 		<maven-clean-plugin.version>3.3.2</maven-clean-plugin.version>
-		<maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+		<maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
 		<maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
 		<maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
 		<maven-install-plugin.version>3.1.1</maven-install-plugin.version>
@@ -75,10 +75,10 @@
 		<maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
 		<maven-artifact-plugin.version>3.5.0</maven-artifact-plugin.version>
 		<maven-archetype-plugin.version>3.2.1</maven-archetype-plugin.version>
-		<maven-assembly-plugin.version>3.7.0</maven-assembly-plugin.version>
+		<maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
 		<maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
 		<maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
-		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
+		<maven-gpg-plugin.version>3.2.1</maven-gpg-plugin.version>
 		<maven-help-plugin.version>3.4.0</maven-help-plugin.version>
 		<maven-invoker-plugin.version>3.6.0</maven-invoker-plugin.version>
 		<maven-jarsigner-plugin.version>3.0.0</maven-jarsigner-plugin.version>
@@ -98,7 +98,7 @@
 
 		<!-- extend plugins -->
 		<!-- https://github.com/wvengen/proguard-maven-plugin -->
-		<proguard-maven-plugin.version>2.6.0</proguard-maven-plugin.version>
+		<proguard-maven-plugin.version>2.6.1</proguard-maven-plugin.version>
 	</properties>
 
 	<!-- repositories -->
@@ -482,7 +482,9 @@
 				</plugin>
 
 				<!-- extend plugins -->
+				<!-- proguard-maven -->
 				<plugin>
+					<!-- https://wvengen.github.io/proguard-maven-plugin/ -->
 					<groupId>com.github.wvengen</groupId>
 					<artifactId>proguard-maven-plugin</artifactId>
 					<version>${proguard-maven-plugin.version}</version>
@@ -766,6 +768,7 @@
 			</plugin>
 
 			<!-- extend plugins -->
+			<!-- proguard-maven -->
 			<plugin>
 				<groupId>com.github.wvengen</groupId>
 				<artifactId>proguard-maven-plugin</artifactId>
