@@ -35,7 +35,7 @@
 		<repository.aliyun.url>https://maven.aliyun.com/repository/public/</repository.aliyun.url>
 		<repository.central.url>https://repo.maven.apache.org/maven2/</repository.central.url>
 
-		<!-- update in 20240318 -->
+		<!-- update in 20240402 -->
 		<!-- plugins version -->
 		<!-- https://maven.apache.org/plugins/ -->
 		<!-- core -->
@@ -56,7 +56,7 @@
 		<maven-war-plugin.version>3.4.0</maven-war-plugin.version>
 		<maven-acr-plugin.version>3.1.0</maven-acr-plugin.version>
 		<maven-shade-plugin.version>3.5.2</maven-shade-plugin.version>
-		<maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+		<maven-source-plugin.version>3.3.1</maven-source-plugin.version>
 		<maven-jlink-plugin.version>3.2.0</maven-jlink-plugin.version>
 		<maven-jmod-plugin.version>3.0.0-alpha-1</maven-jmod-plugin.version>
 		<!-- reporting -->
@@ -73,20 +73,20 @@
 		<maven-surefire-report-plugin.version>3.2.5</maven-surefire-report-plugin.version>
 		<!-- tools -->
 		<maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
-		<maven-artifact-plugin.version>3.5.0</maven-artifact-plugin.version>
+		<maven-artifact-plugin.version>3.5.1</maven-artifact-plugin.version>
 		<maven-archetype-plugin.version>3.2.1</maven-archetype-plugin.version>
 		<maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
 		<maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
 		<maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
-		<maven-gpg-plugin.version>3.2.1</maven-gpg-plugin.version>
+		<maven-gpg-plugin.version>3.2.2</maven-gpg-plugin.version>
 		<maven-help-plugin.version>3.4.0</maven-help-plugin.version>
-		<maven-invoker-plugin.version>3.6.0</maven-invoker-plugin.version>
+		<maven-invoker-plugin.version>3.6.1</maven-invoker-plugin.version>
 		<maven-jarsigner-plugin.version>3.0.0</maven-jarsigner-plugin.version>
 		<maven-jdeprscan-plugin.version>3.0.0-alpha-1</maven-jdeprscan-plugin.version>
 		<maven-patch-plugin.version>1.2</maven-patch-plugin.version>
 		<maven-pdf-plugin.version>1.6.1</maven-pdf-plugin.version>
-		<maven-plugin-plugin.version>3.11.0</maven-plugin-plugin.version>
-		<maven-plugin-report-plugin.version>3.11.0</maven-plugin-report-plugin.version>
+		<maven-plugin-plugin.version>3.12.0</maven-plugin-plugin.version>
+		<maven-plugin-report-plugin.version>3.12.0</maven-plugin-report-plugin.version>
 		<maven-release-plugin.version>3.0.1</maven-release-plugin.version>
 		<maven-remote-resources-plugin.version>3.1.0</maven-remote-resources-plugin.version>
 		<maven-scm-plugin.version>2.0.1</maven-scm-plugin.version>
