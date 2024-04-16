@@ -35,7 +35,7 @@
 		<repository.aliyun.url>https://maven.aliyun.com/repository/public/</repository.aliyun.url>
 		<repository.central.url>https://repo.maven.apache.org/maven2/</repository.central.url>
 
-		<!-- update in 20240402 -->
+		<!-- update in 20240414 -->
 		<!-- plugins version -->
 		<!-- https://maven.apache.org/plugins/ -->
 		<!-- core -->
@@ -51,7 +51,7 @@
 		<!-- packaging -->
 		<maven-ear-plugin.version>3.3.0</maven-ear-plugin.version>
 		<maven-ejb-plugin.version>3.2.1</maven-ejb-plugin.version>
-		<maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+		<maven-jar-plugin.version>3.4.0</maven-jar-plugin.version>
 		<maven-rar-plugin.version>3.0.0</maven-rar-plugin.version>
 		<maven-war-plugin.version>3.4.0</maven-war-plugin.version>
 		<maven-acr-plugin.version>3.1.0</maven-acr-plugin.version>
@@ -69,6 +69,7 @@
 		<maven-jxr-plugin.version>3.3.2</maven-jxr-plugin.version>
 		<maven-linkcheck-plugin.version>1.2</maven-linkcheck-plugin.version>
 		<maven-pmd-plugin.version>3.21.2</maven-pmd-plugin.version>
+		<maven-plugin-report-plugin.version>3.12.0</maven-plugin-report-plugin.version>
 		<maven-project-info-reports-plugin.version>3.5.0</maven-project-info-reports-plugin.version>
 		<maven-surefire-report-plugin.version>3.2.5</maven-surefire-report-plugin.version>
 		<!-- tools -->
@@ -78,7 +79,7 @@
 		<maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
 		<maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
 		<maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
-		<maven-gpg-plugin.version>3.2.2</maven-gpg-plugin.version>
+		<maven-gpg-plugin.version>3.2.3</maven-gpg-plugin.version>
 		<maven-help-plugin.version>3.4.0</maven-help-plugin.version>
 		<maven-invoker-plugin.version>3.6.1</maven-invoker-plugin.version>
 		<maven-jarsigner-plugin.version>3.0.0</maven-jarsigner-plugin.version>
@@ -86,9 +87,8 @@
 		<maven-patch-plugin.version>1.2</maven-patch-plugin.version>
 		<maven-pdf-plugin.version>1.6.1</maven-pdf-plugin.version>
 		<maven-plugin-plugin.version>3.12.0</maven-plugin-plugin.version>
-		<maven-plugin-report-plugin.version>3.12.0</maven-plugin-report-plugin.version>
 		<maven-release-plugin.version>3.0.1</maven-release-plugin.version>
-		<maven-remote-resources-plugin.version>3.1.0</maven-remote-resources-plugin.version>
+		<maven-remote-resources-plugin.version>3.2.0</maven-remote-resources-plugin.version>
 		<maven-scm-plugin.version>2.0.1</maven-scm-plugin.version>
 		<maven-scm-publish-plugin.version>3.2.1</maven-scm-publish-plugin.version>
 		<maven-scripting-plugin.version>3.0.0</maven-scripting-plugin.version>
@@ -328,6 +328,12 @@
 					<artifactId>maven-pmd-plugin</artifactId>
 					<version>${maven-pmd-plugin.version}</version>
 				</plugin>
+				<!-- maven-plugin-report -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-plugin-report-plugin</artifactId>
+					<version>${maven-plugin-report-plugin.version}</version>
+				</plugin>
 				<!-- maven-project-info-reports -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -425,12 +431,6 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-plugin-plugin</artifactId>
 					<version>${maven-plugin-plugin.version}</version>
-				</plugin>
-				<!-- maven-plugin-report -->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-plugin-report-plugin</artifactId>
-					<version>${maven-plugin-report-plugin.version}</version>
 				</plugin>
 				<!-- maven-release -->
 				<plugin>
@@ -639,6 +639,11 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
 			</plugin>
+			<!-- maven-plugin-report -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-report-plugin</artifactId>
+			</plugin>
 			<!-- maven-project-info-reports -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -720,11 +725,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-plugin-plugin</artifactId>
-			</plugin>
-			<!-- maven-plugin-report -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-plugin-report-plugin</artifactId>
 			</plugin>
 			<!-- maven-release -->
 			<plugin>
