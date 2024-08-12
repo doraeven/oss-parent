@@ -35,18 +35,18 @@
 		<repository.aliyun.url>https://maven.aliyun.com/repository/public/</repository.aliyun.url>
 		<repository.central.url>https://repo.maven.apache.org/maven2/</repository.central.url>
 
-		<!-- update in 20240628 -->
+		<!-- update in 20240727 -->
 		<!-- plugins version -->
 		<!-- https://maven.apache.org/plugins/ -->
 		<!-- core -->
 		<maven-clean-plugin.version>3.4.0</maven-clean-plugin.version>
 		<maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
 		<maven-deploy-plugin.version>3.1.2</maven-deploy-plugin.version>
-		<maven-failsafe-plugin.version>3.3.0</maven-failsafe-plugin.version>
+		<maven-failsafe-plugin.version>3.3.1</maven-failsafe-plugin.version>
 		<maven-install-plugin.version>3.1.2</maven-install-plugin.version>
 		<maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
-		<maven-site-plugin.version>4.0.0-M15</maven-site-plugin.version>
-		<maven-surefire-plugin.version>3.3.0</maven-surefire-plugin.version>
+		<maven-site-plugin.version>4.0.0-M16</maven-site-plugin.version>
+		<maven-surefire-plugin.version>3.3.1</maven-surefire-plugin.version>
 		<maven-verifier-plugin.version>1.1</maven-verifier-plugin.version>
 		<!-- packaging -->
 		<maven-ear-plugin.version>3.3.0</maven-ear-plugin.version>
@@ -64,14 +64,14 @@
 		<maven-changes-plugin.version>2.12.1</maven-changes-plugin.version>
 		<maven-checkstyle-plugin.version>3.4.0</maven-checkstyle-plugin.version>
 		<maven-doap-plugin.version>1.2</maven-doap-plugin.version>
-		<maven-javadoc-plugin.version>3.7.0</maven-javadoc-plugin.version>
+		<maven-javadoc-plugin.version>3.8.0</maven-javadoc-plugin.version>
 		<maven-jdeps-plugin.version>3.1.2</maven-jdeps-plugin.version>
 		<maven-jxr-plugin.version>3.4.0</maven-jxr-plugin.version>
 		<maven-linkcheck-plugin.version>1.2</maven-linkcheck-plugin.version>
-		<maven-pmd-plugin.version>3.23.0</maven-pmd-plugin.version>
+		<maven-pmd-plugin.version>3.24.0</maven-pmd-plugin.version>
 		<maven-plugin-report-plugin.version>3.13.1</maven-plugin-report-plugin.version>
-		<maven-project-info-reports-plugin.version>3.6.1</maven-project-info-reports-plugin.version>
-		<maven-surefire-report-plugin.version>3.3.0</maven-surefire-report-plugin.version>
+		<maven-project-info-reports-plugin.version>3.6.2</maven-project-info-reports-plugin.version>
+		<maven-surefire-report-plugin.version>3.3.1</maven-surefire-report-plugin.version>
 		<!-- tools -->
 		<maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
 		<maven-artifact-plugin.version>3.5.1</maven-artifact-plugin.version>
@@ -87,7 +87,7 @@
 		<maven-patch-plugin.version>1.2</maven-patch-plugin.version>
 		<maven-pdf-plugin.version>1.6.1</maven-pdf-plugin.version>
 		<maven-plugin-plugin.version>3.13.1</maven-plugin-plugin.version>
-		<maven-release-plugin.version>3.1.0</maven-release-plugin.version>
+		<maven-release-plugin.version>3.1.1</maven-release-plugin.version>
 		<maven-remote-resources-plugin.version>3.2.0</maven-remote-resources-plugin.version>
 		<maven-scm-plugin.version>2.1.0</maven-scm-plugin.version>
 		<maven-scm-publish-plugin.version>3.3.0</maven-scm-publish-plugin.version>
