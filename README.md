@@ -2,7 +2,8 @@
 
 ![Static Badge](https://img.shields.io/badge/build-passing-brightgreen)
 ![Static Badge](https://img.shields.io/badge/tag-1-blue)
-![Static Badge](https://img.shields.io/badge/released-v20240727-blue)
+![Static Badge](https://img.shields.io/badge/JDK-22-green)
+![Static Badge](https://img.shields.io/badge/released-v20240911-blue)
 ![GitHub License](https://img.shields.io/github/license/doraeven/oss-parent)
 
 ## Introduction
@@ -28,7 +29,7 @@ List the info of **parent pom**.
 | base          | info          | | repositories  | info          | | plugins       | info          |
 | ------------- | ------------- |-| ------------- | ------------- |-| ------------- | ------------- |
 | jdk           | 22            | | master        | aliyun        | | core          | maven         |
-| charset       | UTF-8         | | slave         | central       | | extend        | proguard      |
+| charset       | UTF-8         | | slave         | central       | | extend        | -             |
 
 ## License
 

@@ -1,36 +1,36 @@
-## Apache Maven
+# Apache Maven
 https://maven.apache.org/
 
-## Maven Central
+# Maven Central
 https://repo.maven.apache.org/maven2/
 https://repo1.maven.org/maven2/
-# Maven CDN
+## Maven CDN
 https://maven.aliyun.com/repository/public/
 https://repo.huaweicloud.com/repository/maven/
 https://mirrors.163.com/maven/repository/maven-public/
 https://mirrors.cloud.tencent.com/nexus/repository/maven-public/
-# Maven Search
+## Maven Search
 https://search.maven.org/
 https://central.sonatype.com/
 https://mvnrepository.com/
 
-## Sonatype Releases
+# Sonatype Releases
 https://oss.sonatype.org/content/repositories/releases/
 
-## JBoss
+# JBoss
 https://repository.jboss.org/nexus/content/repositories/releases/
 
-## Clojars
+# Clojars
 https://repo.clojars.org/
 
-## Atlassian Maven
+# Atlassian Maven
 https://packages.atlassian.com/maven/public/
 
-## Oracle Maven
+# Oracle Maven
 https://maven.oracle.com/
 
-## Google’s Android Maven Repository
+# Google’s Android Maven Repository
 https://maven.google.com/
 
-## JitPack
+# JitPack
 https://jitpack.io/
