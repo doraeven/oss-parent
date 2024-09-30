@@ -1,5 +1,5 @@
+# eclipse svn:ignore
 1.Window > Preferences > Team > Ignored Resources
-
 2.Add Pattern:
 +--------------------------+
 .classpath
