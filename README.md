@@ -3,7 +3,7 @@
 ![Static Badge](https://img.shields.io/badge/build-passing-brightgreen)
 ![Static Badge](https://img.shields.io/badge/tag-1-blue)
 ![Static Badge](https://img.shields.io/badge/JDK-23-green)
-![Static Badge](https://img.shields.io/badge/released-v20240930-blue)
+![Static Badge](https://img.shields.io/badge/released-v20250101-blue)
 ![GitHub License](https://img.shields.io/github/license/doraeven/oss-parent)
 
 ## Introduction
