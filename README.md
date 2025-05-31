@@ -2,8 +2,8 @@
 
 ![Static Badge](https://img.shields.io/badge/build-passing-brightgreen)
 ![Static Badge](https://img.shields.io/badge/tag-1-blue)
-![Static Badge](https://img.shields.io/badge/JDK-23-green)
-![Static Badge](https://img.shields.io/badge/released-v20250101-blue)
+![Static Badge](https://img.shields.io/badge/JDK-24-green)
+![Static Badge](https://img.shields.io/badge/released-v20250531-blue)
 ![GitHub License](https://img.shields.io/github/license/doraeven/oss-parent)
 
 ## Introduction
@@ -26,10 +26,10 @@ When starting a new project, please add configured **parent pom** to avoid repli
 
 List the info of **parent pom**.
 
-| base          | info          | | repositories  | info          | | plugins       | info          |
-| ------------- | ------------- |-| ------------- | ------------- |-| ------------- | ------------- |
-| jdk           | 23            | | master        | aliyun        | | core          | maven         |
-| charset       | UTF-8         | | slave         | central       | | extend        | -             |
+| base          | info  | | repositories  | info          | | plugins       | info          |
+| ------------- |-------|-| ------------- | ------------- |-| ------------- | ------------- |
+| jdk           | 24    | | master        | aliyun        | | core          | maven         |
+| charset       | UTF-8 | | slave         | central       | | extend        | -             |
 
 ## License
 
